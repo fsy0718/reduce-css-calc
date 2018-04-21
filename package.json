@@ -1,5 +1,5 @@
 {
-  "name": "reduce-css-calc",
+  "name": "@jfkued/reduce-css-calc",
   "version": "2.1.4",
   "description": "Reduce CSS calc() function to the maximum",
   "keywords": [

@@ -30,6 +30,7 @@
 ([0-9]+("."[0-9]*)?|"."[0-9]+)ex\b     return 'EXS';
 ([0-9]+("."[0-9]*)?|"."[0-9]+)ch\b     return 'CHS';
 ([0-9]+("."[0-9]*)?|"."[0-9]+)rem\b    return 'REMS';
+([0-9]+("."[0-9]*)?|"."[0-9]+)rpx\b    return 'RPXS';
 ([0-9]+("."[0-9]*)?|"."[0-9]+)vw\b     return 'VWS';
 ([0-9]+("."[0-9]*)?|"."[0-9]+)vh\b     return 'VHS';
 ([0-9]+("."[0-9]*)?|"."[0-9]+)vmin\b   return 'VMINS';
@@ -93,6 +94,7 @@ expression
   	| EXS { $$ = { type: 'ExValue', value: parseFloat($1), unit: 'ex' }; }
   	| CHS { $$ = { type: 'ChValue', value: parseFloat($1), unit: 'ch' }; }
   	| REMS { $$ = { type: 'RemValue', value: parseFloat($1), unit: 'rem' }; }
+		| RPXS { $$ = { type: 'RpxValue', value: parseFloat($1), unit: 'rpx' }; }
   	| VHS { $$ = { type: 'VhValue', value: parseFloat($1), unit: 'vh' }; }
   	| VWS { $$ = { type: 'VwValue', value: parseFloat($1), unit: 'vw' }; }
   	| VMINS { $$ = { type: 'VminValue', value: parseFloat($1), unit: 'vmin' }; }
